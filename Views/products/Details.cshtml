@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var data = (products)ViewData["newProduct"];
+}
+<p>new product : @data.productName</p>
+<p>price : @data.price</p>
+    <p class="d-inline">image : @{if (data.productImg == null) {<div class="d-inline">no image </div>}
+
+        else
+        {
+            <p class="d-inline"><img src ="~/img/@data.productImg" width=50px /></p>
+        }}
+    </p>
